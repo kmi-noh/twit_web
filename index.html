@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="page-title">★ 미니홈피 ★</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding:wght@400;700&display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/galmuri/dist/galmuri.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- BGM 플레이어 (placement.js 에서 활성화) -->
+  <div class="bgm-player" id="bgm-player">
+    <button id="bgm-toggle" title="재생/정지">♪</button>
+    <span id="bgm-label">BGM</span>
+    <audio id="bgm-audio" loop></audio>
+  </div>
+
+  <div class="mini-hompy">
+
+    <!-- 헤더 -->
+    <header class="hompy-header">
+      <div class="header-deco" id="header-deco-top"></div>
+      <h1 class="hompy-title" id="hompy-title">★ 나의 미니홈피 ★</h1>
+      <div class="header-deco" id="header-deco-bottom"></div>
+    </header>
+
+    <!-- 프로필 -->
+    <section class="profile-section">
+      <div class="profile-pic-wrap">
+        <img id="profile-pic" src="" alt="프로필">
+        <div class="profile-pic-fallback" id="profile-pic-fallback">🌸</div>
+      </div>
+      <div class="profile-details">
+        <div class="profile-name" id="profile-name">나의 이름</div>
+        <div class="profile-handle" id="profile-handle">@username</div>
+        <div class="visitor-counter" id="visitor-counter">
+          <span class="counter-label">TODAY</span>
+          <div class="counter-digits" id="counter-digits">
+            <span>0</span><span>0</span><span>0</span>
+            <span>0</span><span>0</span><span>0</span>
+          </div>
+        </div>
+        <div class="current-date" id="current-date"></div>
+      </div>
+      <div class="profile-decorations" id="profile-decorations"></div>
+    </section>
+
+    <!-- 컨트롤 -->
+    <div class="controls-section">
+      <div class="controls-top">
+        <div class="sort-buttons">
+          <button class="sort-btn active" data-sort="newest">최신순 ▼</button>
+          <button class="sort-btn" data-sort="oldest">오래된순 ▲</button>
+        </div>
+        <label class="import-btn" title="트위터 아카이브의 tweets.js 파일을 불러옵니다">
+          📂 아카이브 불러오기
+          <input type="file" id="archive-input" accept=".js,.json">
+        </label>
+      </div>
+      <div class="tag-filter-wrap" id="tag-filter-wrap">
+        <button class="tag-btn active" data-tag="all">전체</button>
+      </div>
+    </div>
+
+    <!-- 다이어리 피드 -->
+    <main class="diary-section" id="diary-section">
+      <div class="loading-msg">♪ 로딩 중... ♪</div>
+    </main>
+
+    <!-- 푸터 -->
+    <footer class="hompy-footer">
+      <div class="footer-deco" id="footer-deco"></div>
+      <div class="footer-text" id="footer-text">made with ♥</div>
+    </footer>
+
+  </div>
+
+  <script src="config.js"></script>
+  <script src="placement.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{
+  "name": "twit-minihompy",
+  "version": "1.0.0",
+  "description": "Y2K 싸이월드 감성 트위터 미니홈피",
+  "scripts": {
+    "fetch": "node scripts/fetch-tweets.js",
+    "serve": "npx serve . -p 8080"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
